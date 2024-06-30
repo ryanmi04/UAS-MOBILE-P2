@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">I am hungry</string>
+    <string name="empty_favorites">Empty Favories</string>
+    <string name="ingredients">Ingredients\n</string>
+    <string name="youtube">youtube</string>
+    <string name="search">Search</string>
+    <string name="home">home\n</string>
+    <string name="favorites">Favorites</string>
+    <string name="recipe_detail">Recipe Detail</string>
+    <string name="login">Login</string>
+    <string name="register">Register\n</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="already_have_account_login">Already Have Account? Login!</string>
+</resources>
