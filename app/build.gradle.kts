@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.cinenest"
+    namespace = "com.example.dishdiary"
     compileSdk = 34
 
     defaultConfig {
