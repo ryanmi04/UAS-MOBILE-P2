@@ -1,4 +1,4 @@
-package com.example.dishdiary.presentation.screen
+package com.example.dishdiary.presentation.screen.homescreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -29,7 +29,6 @@ import androidx.compose.ui.unit.dp
 import com.example.dishdiary.R
 import com.example.dishdiary.data.network.model.Category
 import com.example.dishdiary.data.network.model.Recipe
-import com.example.dishdiary.presentation.component.RecipeItem
 import com.example.dishdiary.viewmodel.RecipeListUiState
 import kotlinx.coroutines.flow.Flow
 

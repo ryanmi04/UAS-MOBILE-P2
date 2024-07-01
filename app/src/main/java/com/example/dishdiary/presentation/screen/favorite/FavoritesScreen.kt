@@ -21,7 +21,6 @@ import androidx.compose.ui.unit.dp
 import com.example.dishdiary.R
 import com.example.dishdiary.data.network.model.Category
 import com.example.dishdiary.data.network.model.Recipe
-import com.example.dishdiary.presentation.component.RecipeList
 import com.example.dishdiary.viewmodel.FavoriteRecipesListUiState
 import kotlinx.coroutines.flow.Flow
 

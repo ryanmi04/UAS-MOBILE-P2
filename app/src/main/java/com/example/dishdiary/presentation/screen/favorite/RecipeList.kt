@@ -1,4 +1,4 @@
-package com.example.dishdiary.presentation.component
+package com.example.dishdiary.presentation.screen.favorite
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.dishdiary.data.network.model.Recipe
+import com.example.dishdiary.presentation.screen.homescreen.RecipeItem
 
 @Composable
 fun RecipeList(

@@ -1,4 +1,4 @@
-package com.example.dishdiary.presentation.component
+package com.example.dishdiary.presentation.screen.homescreen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column

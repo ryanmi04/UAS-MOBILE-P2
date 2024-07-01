@@ -1,15 +1,11 @@
 package com.example.dishdiary.presentation.screen
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.TextFieldDefaults
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -26,17 +22,20 @@ fun RegisterScreen(
     onRegisterSuccess: () -> Unit,
     onLoginClick: () -> Unit
 ) {
-    var firstName by remember { mutableStateOf("") }
-    var lastName by remember { mutableStateOf("") }
-    var phoneNumber by remember { mutableStateOf("") }
-    var email by remember { mutableStateOf("") }
-    var username by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
+    var firstName by rememberSaveable { mutableStateOf("") }
+    var lastName by rememberSaveable { mutableStateOf("") }
+    var phoneNumber by rememberSaveable { mutableStateOf("") }
+    var email by rememberSaveable { mutableStateOf("") }
+    var username by rememberSaveable { mutableStateOf("") }
+    var password by rememberSaveable { mutableStateOf("") }
     var errorMessage by remember { mutableStateOf<String?>(null) }
+
+    val scrollState = rememberScrollState()
 
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .verticalScroll(scrollState)
             .padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -152,7 +151,7 @@ fun RegisterScreen(
                         password = password
                     )
                     userViewModel.registerUser(userEntity)
-                    onRegisterSuccess() // Panggil fungsi onRegisterSuccess setelah registrasi berhasil
+                    onRegisterSuccess()
                 } else {
                     errorMessage = "All fields must be filled."
                 }
@@ -168,7 +167,6 @@ fun RegisterScreen(
             Text(stringResource(R.string.register), style = MaterialTheme.typography.bodyLarge)
         }
 
-
         errorMessage?.let { message ->
             Text(
                 text = message,
@@ -183,7 +181,5 @@ fun RegisterScreen(
         ) {
             Text(stringResource(R.string.already_have_account_login), style = MaterialTheme.typography.bodyLarge)
         }
-
-        // Register state handling...
     }
 }
